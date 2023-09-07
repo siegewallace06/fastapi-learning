@@ -1,0 +1,15 @@
+Follow These steps to install FastAPI
+> Setup virtual environment
+virtualenv env
+
+> Activate virtual environment
+env\Scripts\activate
+
+> Install fastapi
+pip install fastapi
+
+> Install uvicorn for web server
+pip install uvicorn
+
+> Run the server
+uvicorn main:app --reload

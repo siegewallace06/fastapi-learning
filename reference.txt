@@ -1,0 +1,9 @@
+Reference:
+FastAPI Basic Tutorial:
+https://youtu.be/tLKKmouUams?si=9DO1BJH-jhOdQYlc
+
+FastAPI Microservice:
+https://youtu.be/Cy9fAvsXGZA?si=5HW2AKm6q9XSrz5R
+
+Documentation:
+https://fastapi.tiangolo.com/
