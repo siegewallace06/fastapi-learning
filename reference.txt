@@ -7,3 +7,6 @@ https://youtu.be/Cy9fAvsXGZA?si=5HW2AKm6q9XSrz5R
 
 Documentation:
 https://fastapi.tiangolo.com/
+
+FastAPI Github:
+https://github.com/bitfumes/fastapi-course/
