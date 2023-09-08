@@ -7,6 +7,7 @@ students = {
     1: {
         "name": "John",
         "age": 17,
+        "test": 70
     }
 }
 
@@ -30,8 +31,8 @@ def get_student_by_id(student_id: int = Path(description="The ID of the student 
     return students[student_id]
 
 
-@app.get("/get-student-by-name")
-def get_student_by_name(*, name: Optional[str] = None, test: int):
+@app.get("/get-student-by-name/{student_id}")
+def get_student_by_name(*, student_id: int, name: Optional[str] = None, test: int):
     for student_id in students:
         if students[student_id]["name"] == name:
             return {"Data": students[student_id]}
