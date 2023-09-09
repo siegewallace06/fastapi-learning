@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Depends, status, Response, HTTPException
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, List
 from sqlalchemy.orm import Session
 from datetime import datetime
 
