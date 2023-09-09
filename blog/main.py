@@ -112,3 +112,17 @@ def get_blog_by_id(id: int, response: Response, db: Session = Depends(get_db)):
         "Message": "Blog retrieved successfully",
         "Data": blog
     }
+
+
+# , response_model=schemas.User)
+@app.post("/user", status_code=status.HTTP_201_CREATED)
+def create_user(request: schemas.User, db: Session = Depends(get_db)):
+    new_user = models.User(
+        name=request.name, email=request.email, password=request.password)
+    db.add(new_user)
+    db.commit()
+    db.refresh(new_user)
+    return {
+        "Message": "User created successfully",
+        "Data": new_user
+    }
