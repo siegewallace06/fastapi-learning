@@ -2,6 +2,7 @@ from fastapi import APIRouter, Depends, status, Response, HTTPException
 from typing import List
 from sqlalchemy.orm import Session
 
+from .. import oauth2
 from .. import schemas, models, database
 from ..repository import blog_repository
 
@@ -13,7 +14,7 @@ get_db = database.get_db
 
 
 @router.get("/")
-def get_all_blogs(db: Session = Depends(get_db)):
+def get_all_blogs(db: Session = Depends(get_db), current_user: schemas.User = Depends(oauth2.get_current_user)):
     return blog_repository.get_all(db)
 
 
