@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional
+from fastapi_utils.api_model import APIModel
 
 
 class Blog(BaseModel):
@@ -8,15 +9,23 @@ class Blog(BaseModel):
     published: Optional[bool]
 
 
-class ShowBlog(BaseModel):
-    title: str
-    body: str
-
-    class Config:
-        from_attributes = True
-
-
 class User(BaseModel):
     name: str
     email: str
     password: str
+
+
+class ShowUser(BaseModel):
+    name: str
+    email: str
+
+    blogs: list[Blog] = []
+
+    class Config():
+        orm_mode = True
+
+
+class ShowBlog(BaseModel):
+    title: str
+    body: str
+    creator: ShowUser
