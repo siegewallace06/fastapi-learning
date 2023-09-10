@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 
-from . import models
-from .database import engine, get_db
-from .routers import blog, user, auth_router
+from blog import models
+from blog.database import engine, get_db
+from blog.routers import blog, user, auth_router
 
 app = FastAPI(
     title="Basic CRUD with FastAPI and SQLAlchemy",

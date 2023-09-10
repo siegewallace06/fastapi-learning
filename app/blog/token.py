@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 from typing import Optional
 from jose import jwt, JWTError
 
-from . import schemas
+from blog import schemas
 
 SECRET_KEY = "99f77464442a7b5618ae63d376bc722291c0eef9d1c21327b6680bc60492cba7"
 ALGORITHM = "HS256"

@@ -3,8 +3,8 @@ from fastapi.security import OAuth2PasswordRequestForm
 from sqlalchemy.orm import Session
 from datetime import timedelta
 
-from .. import schemas, database, models, token
-from ..hashing import Hash
+from blog import schemas, database, models, token
+from blog.hashing import Hash
 
 
 router = APIRouter(prefix="/auth", tags=["Authentication"])

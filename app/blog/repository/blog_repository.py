@@ -2,7 +2,7 @@ from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
 from datetime import datetime
 
-from .. import models, schemas
+from blog import models, schemas
 
 
 def get_all(db: Session):

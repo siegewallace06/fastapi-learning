@@ -1,8 +1,8 @@
 from fastapi import HTTPException, status
 from sqlalchemy.orm import Session
-from ..hashing import Hash
+from blog.hashing import Hash
 
-from .. import models, schemas
+from blog import models, schemas
 
 
 def create(request: schemas.User, db: Session):
